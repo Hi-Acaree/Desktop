@@ -1,0 +1,63 @@
+.root {
+    -fx-font-family: 'Segoe UI', sans-serif;
+    -fx-font-size: 14px; /* Increased base font size */
+}
+
+.nav-bar {
+    -fx-background-color: #4392F1;
+}
+
+.section-box {
+    -fx-padding: 20;
+    -fx-background-color: #ECF0F1;
+    -fx-background-radius: 8;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 10); /* Added shadow */
+}
+
+.section-title {
+    -fx-font-size: 20px; /* Larger title size */
+    -fx-text-fill: #2C3E50;
+    -fx-padding: 0 0 10 0; /* Added padding below the title */
+}
+
+.client-logo, .user-profile {
+    -fx-background-color: #3498DB;
+    -fx-text-fill: white;
+    -fx-padding: 10px; /* Added padding for better spacing */
+}
+
+.list-cell {
+    -fx-padding: 12px;
+    -fx-border-color: transparent;
+    -fx-background-color: white;
+}
+
+.list-cell:filled:selected, .list-cell:filled:selected:hover, .list-cell:hover {
+    -fx-background-color: #AED6F1;
+    -fx-text-fill: #2C3E50;
+    -fx-cursor: hand; /* Change cursor to hand on hover */
+}
+
+.list-view {
+    -fx-background-color: #ECF0F1; /* Slight background change for consistency */
+    -fx-background-insets: 0;
+}
+
+.combo-box {
+    -fx-background-color: white;
+    -fx-border-color: #2C3E50;
+    -fx-border-radius: 5;
+    -fx-pref-width: 200px; /* Responsive width */
+}
+
+.button {
+    -fx-background-color: #3498DB;
+    -fx-text-fill: white;
+    -fx-background-radius: 5;
+    -fx-padding: 10px 20px; /* Added padding */
+    -fx-font-weight: bold; /* Make text bold */
+}
+
+.button:hover {
+    -fx-background-color: #2980B9; /* Darker shade on hover */
+}

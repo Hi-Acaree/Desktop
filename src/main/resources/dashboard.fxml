@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import java.net.URL?>
+<?import javafx.scene.image.ImageView?>
+<BorderPane xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" prefHeight="800.0" prefWidth="1200.0"
+>
+    <top>
+        <HBox styleClass="top-bar" BorderPane.alignment="CENTER">
+            <ImageView fitWidth="30" fitHeight="30" styleClass="client-logo" /> <!-- Add the client's logo image here -->
+            <Pane HBox.hgrow="ALWAYS" /> <!-- Spacer -->
+            <HBox styleClass="user-profile" alignment="CENTER_RIGHT">
+                <Label text="Dr Kim" />
+                <ImageView fitWidth="30" fitHeight="30" styleClass="user-profile-image" /> <!-- Add the user profile image here -->
+            </HBox>
+        </HBox>
+    </top>
+    <left>
+        <VBox prefWidth="200.0" styleClass="nav-bar" BorderPane.alignment="CENTER">
+            <!-- Navigation menu items -->
+            <!-- Navigation buttons -->
+            <Button text="Dashboard" />
+            <Button text="Schedule" />
+            <Button text="History" />
+            <Button text="Log Out" />
+        </VBox>
+    </left>
+    <center>
+        <GridPane BorderPane.alignment="CENTER">
+            <columnConstraints>
+                <ColumnConstraints percentWidth="50" hgrow="SOMETIMES" />
+                <ColumnConstraints percentWidth="50" hgrow="SOMETIMES" />
+            </columnConstraints>
+            <children>
+                <!-- New Patient Consultations Section -->
+                <VBox GridPane.columnIndex="0" styleClass="section-box">
+                    <Label text="New Patient Consultations" styleClass="section-title" />
+                    <ComboBox prefWidth="150.0" promptText="Today" styleClass="combo-box" />
+                    <ScrollPane fitToWidth="true">
+                        <content>
+                            <ListView fx:id="newPatientList" VBox.vgrow="ALWAYS" styleClass="list-view" />
+                        </content>
+                    </ScrollPane>
+                </VBox>
+                <!-- Returning Patient Consultations Section -->
+                <VBox GridPane.columnIndex="1" styleClass="section-box">
+                    <Label text="Returning Patient Consultations" styleClass="section-title" />
+                    <ComboBox prefWidth="150.0" promptText="Today" styleClass="combo-box" />
+                    <ScrollPane fitToWidth="true">
+                        <content>
+                            <ListView fx:id="returningPatientList" VBox.vgrow="ALWAYS" styleClass="list-view" />
+                        </content>
+                    </ScrollPane>
+                </VBox>
+            </children>
+        </GridPane>
+    </center>
+    <stylesheets>
+        <URL value="@style.css" />
+    </stylesheets>
+</BorderPane>
+
+
